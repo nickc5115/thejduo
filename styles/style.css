@@ -60,7 +60,7 @@ footer a {
     display: block;
     margin: 0 auto;
     /* Centers the image horizontally */
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .fab {
