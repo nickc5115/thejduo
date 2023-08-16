@@ -29,6 +29,15 @@ footer {
     text-align: center;
 }
 
+footer a {
+    color: #0099cc; /* Color for links */
+    text-decoration: none; /* Removes the underline */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Adds underline when hovering */
+}
+
 #home-link {
     text-decoration: none;
     color: white; /* Or whatever color you're using for the header text */
