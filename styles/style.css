@@ -9,11 +9,11 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    font-family: 'Rock Salt', sans-serif;
+    font-family: 'Rock Salt', cursive;
 }
 
 header h1 {
-    font-family: 'Rock Salt', sans-serif;
+    font-family: 'Rock Salt', cursive;
     /* Additional styling as needed */
 }
 
@@ -38,16 +38,6 @@ footer {
 footer a {
     color: #0099cc; /* Color for links */
     text-decoration: none; /* Removes the underline */
-}
-
-.fab {
-    font-size: 20px; /* Adjust the size */
-    color: #0099cc; /* Adjust the color */
-    margin-right: 10px; /* Add some space between the icons */
-}
-
-footer a:hover .fab {
-    color: #006699; /* Change color on hover */
 }
 
 #home-link {
