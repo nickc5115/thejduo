@@ -40,7 +40,6 @@ footer {
 
 #band-image {
     width: 100%; /* This will make the image full-width */
-    max-width: 800px; /* You can adjust this to control the maximum width */
     height: auto; /* This maintains the aspect ratio */
     display: block;
     margin: 0 auto; /* Centers the image horizontally */
