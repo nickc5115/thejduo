@@ -47,7 +47,7 @@ footer a:hover {
     text-align: center;
 }
 
-#band-image {
+#home-main-image {
     width: 100%; /* This will make the image full-width */
     height: auto; /* This maintains the aspect ratio */
     display: block;
