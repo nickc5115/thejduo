@@ -44,3 +44,9 @@ footer {
     display: block;
     margin: 0 auto; /* Centers the image horizontally */
 }
+@media (max-width: 600px) {
+    #band-image {
+        width: 80%; /* Reduce the width to 80% for mobile devices */
+        /* You can adjust this percentage based on how wide you want the image to be */
+    }
+}
