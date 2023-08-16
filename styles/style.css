@@ -56,3 +56,18 @@ footer a {
     margin: 0 auto; /* Centers the image horizontally */
     max-width: 50%;
 }
+
+.fab {
+    font-size: 30px; /* Increase the size as desired */
+}
+
+/* If you want to add more styling, such as spacing or color, you can do that here as well */
+.fab.fa-facebook {
+    color: #3b5998; /* Facebook's blue color */
+    margin-right: 10px; /* Optional spacing between icons */
+}
+
+.fab.fa-instagram {
+    color: #E1306C; /* Instagram's pink color */
+    margin-right: 10px; /* Optional spacing between icons */
+}
