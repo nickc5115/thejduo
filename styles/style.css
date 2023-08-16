@@ -1,5 +1,5 @@
 body {
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Rock Salt', cursive !important;
     margin: 0;
     padding: 0;
 }
@@ -9,11 +9,11 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Rock Salt', cursive !important;
 }
 
 header h1 {
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Rock Salt', cursive !important;
     /* Additional styling as needed */
 }
 
@@ -36,13 +36,16 @@ footer {
 }
 
 footer a {
-    color: white; /* Color for links */
-    text-decoration: none; /* Removes the underline */
+    color: white;
+    /* Color for links */
+    text-decoration: none;
+    /* Removes the underline */
 }
 
 #home-link {
     text-decoration: none;
-    color: white; /* Or whatever color you're using for the header text */
+    color: white;
+    /* Or whatever color you're using for the header text */
 }
 
 #image-section {
@@ -50,24 +53,36 @@ footer a {
 }
 
 #home-main-img {
-    width: 100%; /* This will make the image full-width */
-    height: auto; /* This maintains the aspect ratio */
+    width: 100%;
+    /* This will make the image full-width */
+    height: auto;
+    /* This maintains the aspect ratio */
     display: block;
-    margin: 0 auto; /* Centers the image horizontally */
+    margin: 0 auto;
+    /* Centers the image horizontally */
     max-width: 50%;
 }
 
 .fab {
-    font-size: 30px; /* Increase the size as desired */
+    font-size: 30px;
+    /* Increase the size as desired */
 }
 
 /* If you want to add more styling, such as spacing or color, you can do that here as well */
 .fab.fa-facebook {
-    color: #3b5998; /* Facebook's blue color */
-    margin-right: 10px; /* Optional spacing between icons */
+    color: #3b5998;
+    /* Facebook's blue color */
+    margin-right: 10px;
+    /* Optional spacing between icons */
 }
 
 .fab.fa-instagram {
-    color: #E1306C; /* Instagram's pink color */
-    margin-right: 10px; /* Optional spacing between icons */
+    color: #E1306C;
+    /* Instagram's pink color */
+    margin-right: 10px;
+    /* Optional spacing between icons */
+}
+
+.navbar {
+    background-color: #282c34 !important;
 }
