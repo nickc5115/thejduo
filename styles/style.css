@@ -47,14 +47,14 @@ footer a:hover {
     text-align: center;
 }
 
-#home-main-image {
+#home-main-img {
     width: 100%; /* This will make the image full-width */
     height: auto; /* This maintains the aspect ratio */
     display: block;
     margin: 0 auto; /* Centers the image horizontally */
 }
 @media (max-width: 600px) {
-    #band-image {
+    #home-main-img {
         width: 80%; /* Reduce the width to 80% for mobile devices */
         /* You can adjust this percentage based on how wide you want the image to be */
     }
