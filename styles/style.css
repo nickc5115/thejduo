@@ -52,6 +52,7 @@ footer a:hover {
     height: auto; /* This maintains the aspect ratio */
     display: block;
     margin: 0 auto; /* Centers the image horizontally */
+    max-width: 80%;
 }
 @media (max-width: 600px) {
     #home-main-img {
