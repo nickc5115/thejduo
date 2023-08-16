@@ -29,6 +29,11 @@ footer {
     text-align: center;
 }
 
+#home-link {
+    text-decoration: none;
+    color: white; /* Or whatever color you're using for the header text */
+}
+
 #image-section {
     text-align: center;
 }
