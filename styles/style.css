@@ -24,8 +24,9 @@ nav a {
 }
 
 .navbar-nav .nav-link {
-    font-size: 24px; /* You can adjust the size as needed */
-  }
+    font-size: 24px;
+    /* You can adjust the size as needed */
+}
 
 section {
     padding: 20px;
@@ -57,13 +58,15 @@ footer a {
     width: 100%;
     padding: 0;
     margin: 0;
-  }
-  
-  #home-main-img {
+}
+
+#home-main-img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove any space below the image */
-  }
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Remove any space below the image */
+}
 
 .fab {
     font-size: 30px;
@@ -117,55 +120,61 @@ footer a {
     }
 }
 
-  .container {
+.container {
     max-width: 800px;
     margin: auto;
-  }
-  
-  .row {
+}
+
+.row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     margin: 20px 0;
-  }
-  
-  .bio-image, .bio-text {
+}
+
+.bio-image,
+.bio-text {
     width: 50%;
     margin: 10px;
-  }
-  
-  .bio-image img {
+}
+
+.bio-image img {
     width: 100%;
     border-radius: 10px;
-  }
-  
-  .left {
+}
+
+.left {
     order: 1;
-  }
-  
-  .right {
+}
+
+.right {
     order: 2;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .bio-image, .bio-text {
-      width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .bio-image,
+    .bio-text {
+        width: 100%;
     }
-  
+
     .right {
-      order: 1;
+        order: 1;
     }
-  
+
     .left {
-      order: 2;
+        order: 2;
     }
-  }
-  
-  .band-member-image {
-    border-radius: 25px; /* or any other value that suits your design */
+}
+
+.band-member-image {
+    border-radius: 25px;
+    /* or any other value that suits your design */
     padding-bottom: 10px;
-  }
-  
-  
-  
-  
+}
+
+.instagram-link {
+    color: #0d6efd;
+    font-size: 20px;
+    text-decoration: none;
+}
