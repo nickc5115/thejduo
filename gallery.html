@@ -111,8 +111,6 @@
                 <div class="carousel-item">
                     <img src="assets/gallery_images/image_20.JPEG" class="d-block w-100" alt="Image 20">
                 </div>
-
-
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -144,38 +142,37 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var galleryCarousel = document.getElementById('galleryCarousel');
-            var slides = galleryCarousel.querySelectorAll('.carousel-item');
-            var thumbnailGrid = document.getElementById('thumbnailGrid');
+        document.addEventListener("DOMContentLoaded", function () {
+            var carouselItems = document.querySelectorAll('#galleryCarousel .carousel-item img');
+            var gridContainer = document.getElementById('thumbnailGrid');
+            var galleryCarousel = new bootstrap.Carousel(document.getElementById('galleryCarousel'), {
+                interval: false
+            });
 
-            for (var i = 0; i < slides.length; i += 5) {
-                var row = document.createElement('div');
-                row.className = 'row';
+            var row = null;
 
-                for (var j = 0; j < 5 && (i + j) < slides.length; j++) {
-                    var col = document.createElement('div');
-                    col.className = 'col-2';
-
-                    var thumbnail = document.createElement('img');
-                    thumbnail.className = 'img-thumbnail';
-
-                    var imgElement = slides[i + j].querySelector('img');
-                    thumbnail.src = imgElement.src;
-                    thumbnail.alt = imgElement.alt;
-                    thumbnail.onclick = (function (slideNumber) {
-                        return function () {
-                            goToSlide(slideNumber);
-                        };
-                    })(i + j);
-
-                    col.appendChild(thumbnail);
-                    row.appendChild(col);
+            carouselItems.forEach(function (image, index) {
+                if (index % 3 === 0) {
+                    row = document.createElement('div');
+                    row.className = 'row';
+                    gridContainer.appendChild(row);
                 }
 
-                thumbnailGrid.appendChild(row);
-            }
+                var col = document.createElement('div');
+                col.className = 'col-4';
+                var thumbnail = document.createElement('img');
+                thumbnail.src = image.src;
+                thumbnail.alt = image.alt;
+                col.appendChild(thumbnail);
+
+                col.onclick = function () {
+                    galleryCarousel.to(index);
+                };
+
+                row.appendChild(col);
+            });
         });
+
 
         function goToSlide(slideNumber) {
             var galleryCarousel = new bootstrap.Carousel(document.getElementById('galleryCarousel'));

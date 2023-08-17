@@ -195,3 +195,8 @@ footer a {
     margin: 0.5rem;
     /* Adds some space between the thumbnails */
 }
+
+#thumbnailGrid img {
+    max-width: 100%;
+    height: auto;
+}
