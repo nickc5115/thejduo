@@ -184,15 +184,14 @@ footer a {
     margin: 20px auto;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    z-index: 2;
-    height: 90%;
-    /* Ensure that the controls are above the other content, but not the video controls */
+#thumbnailGrid .row {
+    justify-content: center;
+    /* Centers the columns horizontally */
 }
 
-.carousel-item video {
-    position: relative;
-    z-index: 1;
-    /* Ensure that the video controls are above the other content but below the carousel controls */
+#thumbnailGrid .col-2 {
+    flex: 0 0 auto;
+    /* Prevents Bootstrap from stretching the column */
+    margin: 0.5rem;
+    /* Adds some space between the thumbnails */
 }

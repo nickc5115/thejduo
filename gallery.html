@@ -125,6 +125,9 @@
         </div>
 
     </section>
+    <section class="container" id="thumbnailGrid">
+        <!-- JavaScript will append the thumbnail grid here -->
+    </section>
 
     <footer>
         <p>&copy; 2023 The J Duo</p>
@@ -139,6 +142,46 @@
         </p>
     </footer>
 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var galleryCarousel = document.getElementById('galleryCarousel');
+            var slides = galleryCarousel.querySelectorAll('.carousel-item');
+            var thumbnailGrid = document.getElementById('thumbnailGrid');
+
+            for (var i = 0; i < slides.length; i += 5) {
+                var row = document.createElement('div');
+                row.className = 'row';
+
+                for (var j = 0; j < 5 && (i + j) < slides.length; j++) {
+                    var col = document.createElement('div');
+                    col.className = 'col-2';
+
+                    var thumbnail = document.createElement('img');
+                    thumbnail.className = 'img-thumbnail';
+
+                    var imgElement = slides[i + j].querySelector('img');
+                    thumbnail.src = imgElement.src;
+                    thumbnail.alt = imgElement.alt;
+                    thumbnail.onclick = (function (slideNumber) {
+                        return function () {
+                            goToSlide(slideNumber);
+                        };
+                    })(i + j);
+
+                    col.appendChild(thumbnail);
+                    row.appendChild(col);
+                }
+
+                thumbnailGrid.appendChild(row);
+            }
+        });
+
+        function goToSlide(slideNumber) {
+            var galleryCarousel = new bootstrap.Carousel(document.getElementById('galleryCarousel'));
+            galleryCarousel.to(slideNumber);
+        }
+    </script>
 </body>
 
 </html>
