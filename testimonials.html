@@ -56,24 +56,24 @@
             /* rest of the styles... */
         }
 
+        .testimonial-carousel-container {
+            position: relative;
+            max-width: 600px;
+            margin: 100px auto 40px;
+            /* Adjust the 100px value to change the top margin */
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: -50px;
+            /* Adjust this value to position the buttons */
+            width: 100%;
+            text-align: center;
+        }
+
         .carousel-control-prev,
         .carousel-control-next {
-            position: absolute;
-            z-index: 5;
-            /* Ensures that the controls appear on top of the slides */
             display: inline-block;
-            margin-top: -20px;
-            /* You can adjust this value */
-        }
-
-        .carousel-control-prev {
-            left: -80px;
-            /* You can adjust this value to move the button further from the container */
-        }
-
-        .carousel-control-next {
-            right: -80px;
-            /* You can adjust this value to move the button further from the container */
         }
 
         .carousel-control-prev-icon,
@@ -81,6 +81,11 @@
             background-color: #555;
             padding: 10px;
             border-radius: 50%;
+        }
+
+        .carousel-control-prev {
+            margin-right: 10px;
+            /* Add some space between the prev and next buttons */
         }
     </style>
 </head>
@@ -128,116 +133,143 @@
             </div>
         </nav>
     </header>
-
-    <div id="testimonialCarousel" class="carousel slide testimonial-container" data-bs-ride="carousel">
-        <div class="carousel-indicators">
+    <div class="testimonial-carousel-container">
+        <div class="carousel-controls">
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="testimonial-slide">
-                    <p>"The JDuo made my husband's surprise party absolutely epic! They played all of our favorite songs
-                        and are so, so talented! We loved that they got our guests involved in the songs, played a few
-                        kids' songs (like "Baby Shark"), and even went the extra mile to play a special birthday song
-                        not usually on their setlist. A bunch of guests asked for their info for future parties! Thanks
-                        again, JDuo! I seriously had so, so, so much fun."</p>
-                    <p class="testimonial-author">- Jenna</p>
-                </div>
+        <div id="testimonialCarousel" class="carousel slide testimonial-container" data-bs-interval="false"
+            data-bs-ride="carousel">
+            <div class="carousel-indicators">
             </div>
-            <div class="carousel-item">
-                <div class="testimonial-slide">
-                    <p>"You guys were amazing! Thanks you for making my birthday extra special!!!"</p>
-                    <p class="testimonial-author">- Sabrina</p>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="testimonial-slide">
+                        <p>"The JDuo made my husband's surprise party absolutely epic! They played all of our favorite
+                            songs
+                            and are so, so talented! We loved that they got our guests involved in the songs, played a
+                            few
+                            kids' songs (like "Baby Shark"), and even went the extra mile to play a special birthday
+                            song
+                            not usually on their setlist. A bunch of guests asked for their info for future parties!
+                            Thanks
+                            again, JDuo! I seriously had so, so, so much fun."</p>
+                        <p class="testimonial-author">- Jenna</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="testimonial-slide">
-                    <p>"If you're looking for music for your private event, look no further than the JDuo! They were so
-                        personal with our friends and family, welcomed requests, and played so much variety in the music
-                        that everyone had a blast! Jordan and Jake are so talented and will make your event one to
-                        remember!!!"</p>
-                    <p class="testimonial-author">- Becky</p>
+                <div class="carousel-item">
+                    <div class="testimonial-slide">
+                        <p>"You guys were amazing! Thanks you for making my birthday extra special!!!"</p>
+                        <p class="testimonial-author">- Sabrina</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="testimonial-slide">
-                    <p>"Guys thanks for performing yesterday. You guys are awesome! Thanks for everything!"</p>
-                    <p class="testimonial-author">- Dennis</p>
+                <div class="carousel-item">
+                    <div class="testimonial-slide">
+                        <p>"If you're looking for music for your private event, look no further than the JDuo! They were
+                            so
+                            personal with our friends and family, welcomed requests, and played so much variety in the
+                            music
+                            that everyone had a blast! Jordan and Jake are so talented and will make your event one to
+                            remember!!!"</p>
+                        <p class="testimonial-author">- Becky</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="testimonial-slide">
-                    <p>"We saw The ]duo for the first time at Triple Sun Spirits last fall & I immediately knew I wanted
-                        to hire them for my 50th birthday celebration. They did not disappoint! They were a huge hit! So
-                        much in fact I had them play at my daughters graduation party. Each event had a mix of teenagers
-                        & older folks & everyone enjoyed them! We danced & sang along to newer music & some oldies! ]Duo
-                        has such a great, natural vibe! They were the best part of both my parties!"</p>
-                    <p class="testimonial-author">- Sabrina</p>
+                <div class="carousel-item">
+                    <div class="testimonial-slide">
+                        <p>"Guys thanks for performing yesterday. You guys are awesome! Thanks for everything!"</p>
+                        <p class="testimonial-author">- Dennis</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="testimonial-slide">
-                    <p>"What an absolute joy to catch @thejduomusic show a few weeks ago at @johnandpetersnewhope. I
-                        walked in during your Pink Floyd's Wish You Were Here cover. You had me there, but then! Boom!
-                        Out you come with the Cranberries, the Killer's, Linkin Park, and sooo much more. Are you
-                        kidding me??!!! AND THEN, you beckon me on stage to share in the singing of Blink-182's I Miss
-                        You. This was no doubt a night to remember!!!!! Thank you so much for sharing vour talent and
-                        good vibes! I must say, you two are pounding the pavement and booking gigs left and right! Good
-                        on you and good for us! Folks, get to one of their performances. You'll leave happy, guaranteed.
-                        Thanks @johnandpetersnewhope for bringing them to us. Catch The J Duo tonight @mikesvorkstreet
-                        !! Or @triplesunspirits_newtown on May 27! Looking forward to seeing them again soon!
-                        #buckscountymusic"</p>
-                    <p class="testimonial-author">- @localmusicreviews_pa_nj via Instagram</p>
+                <div class="carousel-item">
+                    <div class="testimonial-slide">
+                        <p>"We saw The ]duo for the first time at Triple Sun Spirits last fall & I immediately knew I
+                            wanted
+                            to hire them for my 50th birthday celebration. They did not disappoint! They were a huge
+                            hit! So
+                            much in fact I had them play at my daughters graduation party. Each event had a mix of
+                            teenagers
+                            & older folks & everyone enjoyed them! We danced & sang along to newer music & some oldies!
+                            ]Duo
+                            has such a great, natural vibe! They were the best part of both my parties!"</p>
+                        <p class="testimonial-author">- Sabrina</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="testimonial-slide">
-                    <p>"Best graduation party entertainment by The JDuo! Our guests had an amazing time singing all
-                        night long! Great time and best memories!"</p>
-                    <p class="testimonial-author">- Kelly & Dan</p>
+                <div class="carousel-item">
+                    <div class="testimonial-slide">
+                        <p>"What an absolute joy to catch @thejduomusic show a few weeks ago at @johnandpetersnewhope. I
+                            walked in during your Pink Floyd's Wish You Were Here cover. You had me there, but then!
+                            Boom!
+                            Out you come with the Cranberries, the Killer's, Linkin Park, and sooo much more. Are you
+                            kidding me??!!! AND THEN, you beckon me on stage to share in the singing of Blink-182's I
+                            Miss
+                            You. This was no doubt a night to remember!!!!! Thank you so much for sharing vour talent
+                            and
+                            good vibes! I must say, you two are pounding the pavement and booking gigs left and right!
+                            Good
+                            on you and good for us! Folks, get to one of their performances. You'll leave happy,
+                            guaranteed.
+                            Thanks @johnandpetersnewhope for bringing them to us. Catch The J Duo tonight
+                            @mikesvorkstreet
+                            !! Or @triplesunspirits_newtown on May 27! Looking forward to seeing them again soon!
+                            #buckscountymusic"</p>
+                        <p class="testimonial-author">- @localmusicreviews_pa_nj via Instagram</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="testimonial-slide">
-                    <p>"J Duo made our birthday party unforgettable! They played every song we requested and even threw
-                        in some personal touches. We can't stop recommending them to all our friends."</p>
-                    <p class="testimonial-author">- Kayla and Tim</p>
+                <div class="carousel-item">
+                    <div class="testimonial-slide">
+                        <p>"Best graduation party entertainment by The JDuo! Our guests had an amazing time singing all
+                            night long! Great time and best memories!"</p>
+                        <p class="testimonial-author">- Kelly & Dan</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="testimonial-slide">
-                    <p>"We would like to thank the J Duo for playing at our private birthday party. They were so
-                        professional and talented and made the night extra special by taking requests and engaging our
-                        guests. The night would not have been as much fun with the J Duo!"</p>
-                    <p class="testimonial-author">- the Henrys</p>
+                <div class="carousel-item">
+                    <div class="testimonial-slide">
+                        <p>"J Duo made our birthday party unforgettable! They played every song we requested and even
+                            threw
+                            in some personal touches. We can't stop recommending them to all our friends."</p>
+                        <p class="testimonial-author">- Kayla and Tim</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="testimonial-slide">
-                    <p>"J Duo was the perfect compliment to our daughters first and third summer birthday backyard bash.
-                        Jake and Jordan were cranking out family friendly jams all afternoon and even dropped in some of
-                        Dad's favorite throwback summer vibes from the likes of 311 and Bob Marley. The duo were super
-                        gracious and instantly helped to take our party to the next level"</p>
-                    <p class="testimonial-author">- Ashley</p>
+                <div class="carousel-item">
+                    <div class="testimonial-slide">
+                        <p>"We would like to thank the J Duo for playing at our private birthday party. They were so
+                            professional and talented and made the night extra special by taking requests and engaging
+                            our
+                            guests. The night would not have been as much fun with the J Duo!"</p>
+                        <p class="testimonial-author">- the Henrys</p>
+                    </div>
                 </div>
-            </div>
-            <div class="carousel-item">
-                <div class="testimonial-slide">
-                    <p>"Thanks again for an amazing evening!! My fam can't stop talking how awesome you were! Made the
-                        party for sure!"</p>
-                    <p class="testimonial-author">- Kristen</p>
+                <div class="carousel-item">
+                    <div class="testimonial-slide">
+                        <p>"J Duo was the perfect compliment to our daughters first and third summer birthday backyard
+                            bash.
+                            Jake and Jordan were cranking out family friendly jams all afternoon and even dropped in
+                            some of
+                            Dad's favorite throwback summer vibes from the likes of 311 and Bob Marley. The duo were
+                            super
+                            gracious and instantly helped to take our party to the next level"</p>
+                        <p class="testimonial-author">- Ashley</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-slide">
+                        <p>"Thanks again for an amazing evening!! My fam can't stop talking how awesome you were! Made
+                            the
+                            party for sure!"</p>
+                        <p class="testimonial-author">- Kristen</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
-
     <footer>
         <p>&copy; 2023 The J Duo</p>
         <p>
