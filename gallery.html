@@ -51,8 +51,18 @@
             padding: 20px;
             margin: 30px;
             border: 1px solid #f5f183;
-            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-            width: 85%
+            box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+            width: 85%;
+        }
+
+        .post-it-left {
+            transform: rotate(-1.5deg);
+            /* Slight angle to the left */
+        }
+
+        .post-it-right {
+            transform: rotate(1.5deg);
+            /* Slight angle to the right */
         }
 
         .post-it.locations ul {
@@ -122,7 +132,7 @@
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-3 text-center post-it locations">
+            <div class="col-md-3 text-center post-it post-it-left locations">
                 <h3>You may have seen us before!</h3>
                 <ul>
                     <li>El barrio</li>
@@ -164,7 +174,7 @@
                     <li>Stone & Keys</li>
                 </ul>
             </div>
-            <div class="col-md-3 text-center post-it">
+            <div class="col-md-3 text-center post-it post-it-right">
                 <h3>We play at all kinds of events!</h3>
                 <ul>
                     <li>Weddings</li>
