@@ -53,6 +53,8 @@
             border: 1px solid #f5f183;
             box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
             width: 85%;
+            transition: transform 0.3s ease;
+            /* Transition effect */
         }
 
         .post-it-left {
@@ -63,6 +65,17 @@
         .post-it-right {
             transform: rotate(1.5deg);
             /* Slight angle to the right */
+        }
+
+        /* Additional styles for clicked state */
+        .post-it-left.clicked {
+            transform: rotate(1.5deg);
+            /* Angle to the right when clicked */
+        }
+
+        .post-it-right.clicked {
+            transform: rotate(-1.5deg);
+            /* Angle to the left when clicked */
         }
 
         .post-it.locations ul {
@@ -252,6 +265,21 @@
         function closeLightbox() {
             document.getElementById('lightbox').style.display = 'none';
         }
+
+        // Apply the click effect to all post-its with class "post-it-left"
+        document.querySelectorAll('.post-it-left').forEach(function (postIt) {
+            postIt.addEventListener('click', function () {
+                this.classList.toggle('clicked');
+            });
+        });
+
+        // Apply the click effect to all post-its with class "post-it-right"
+        document.querySelectorAll('.post-it-right').forEach(function (postIt) {
+            postIt.addEventListener('click', function () {
+                this.classList.toggle('clicked');
+            });
+        });
+
 
     </script>
 </body>
