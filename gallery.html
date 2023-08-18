@@ -47,11 +47,12 @@
         }
 
         .post-it {
-            background-color: #fffb88;
+            background-color: #f5f183;
             padding: 20px;
             margin: 30px;
-            border: 1px solid #d4d4a1;
+            border: 1px solid #f5f183;
             box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            width: 85%
         }
 
         .post-it.locations ul {
@@ -199,9 +200,6 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var gridContainer = document.getElementById('thumbnailGrid');
-            var galleryCarousel = new bootstrap.Carousel(document.getElementById('galleryCarousel'), {
-                interval: false
-            });
 
             // Specify the number of images or dynamically fetch from your server
             var numberOfImages = 9;
