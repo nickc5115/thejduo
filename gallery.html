@@ -190,7 +190,7 @@
     </div>
 
     <section class="container" id="thumbnailGrid">
-        <img src="assets/gallery_images/image_1.JPEG">
+        <!-- populated via JS-->
     </section>
 
     <footer>
@@ -232,7 +232,7 @@
                 var thumbnail = document.createElement('img');
 
                 // Make sure to name your images in a way you can iterate through them like image1.jpg, image2.jpg, etc.
-                thumbnail.src = "assets/gallery_images/image_" + (index + 1) + ".jpeg";
+                thumbnail.src = "assets/gallery_images/image_" + (index + 1) + ".JPEG";
                 thumbnail.alt = "image " + (index + 1);
                 col.appendChild(thumbnail);
 
