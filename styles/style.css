@@ -52,7 +52,10 @@ footer a {
 #home-link {
     text-decoration: none;
     color: white;
-    /* Or whatever color you're using for the header text */
+    display: flex;
+    /* Set display to flex */
+    align-items: center;
+    /* Center items vertically */
 }
 
 #image-section {
