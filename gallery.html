@@ -190,7 +190,7 @@
     </div>
 
     <section class="container" id="thumbnailGrid">
-        <!-- JavaScript will append the thumbnail grid here -->
+        <img src="assets/gallery_images/image_1.JPEG">
     </section>
 
     <footer>
@@ -206,6 +206,10 @@
         </p>
     </footer>
 
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged Image">
+    </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -250,10 +254,6 @@
         }
 
     </script>
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-        <img id="lightbox-img" src="" alt="Enlarged Image">
-    </div>
 </body>
 
 </html>
