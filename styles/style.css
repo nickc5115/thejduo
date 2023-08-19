@@ -264,3 +264,39 @@ footer a {
         margin: 0;
     }
 }
+
+.slide-in {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.slide-in.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Start the items off the right of the page (or left for flex-row-reverse) */
+.slide-in-row {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-in-row .col-lg-6 {
+    opacity: 0;
+    transform: translateX(100%);
+    /* Start off the right of the container */
+}
+
+/* For the reversed row */
+.slide-in-row.flex-lg-row-reverse .col-lg-6 {
+    transform: translateX(-100%);
+    /* Start off the left of the container */
+}
+
+/* When the row becomes visible in the viewport, slide them in */
+.slide-in-row.visible .col-lg-6 {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s ease-out;
+}
