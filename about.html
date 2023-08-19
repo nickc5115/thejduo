@@ -15,6 +15,42 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        .slide-in-left,
+        .slide-in-right {
+            opacity: 0;
+            /* Initially hidden */
+            transition: all 0.5s ease-in-out;
+        }
+
+        .slide-in-left {
+            transform: translateX(-100%);
+            /* Initially off-screen to the left */
+        }
+
+        .slide-in-right {
+            transform: translateX(100%);
+            /* Initially off-screen to the right */
+        }
+
+        /* Styles to be added by ScrollReveal when the elements are revealed */
+        .slide-in-left.reveal,
+        .slide-in-right.reveal {
+            opacity: 1;
+            /* Fully visible */
+            transform: translateX(0);
+            /* Move to original position */
+        }
+
+        .profile img {
+            /* Styles for the image */
+        }
+
+        .profile .bio {
+            /* Styles for the bio */
+        }
+    </style>
 
 </head>
 
@@ -67,7 +103,7 @@
         <div class="container">
             <!-- Jake Dillon's section -->
             <div class="row">
-                <div class="col-lg-6"><img src="assets/jake-dillon-image.jpg" alt="Jake Dillon"
+                <div class="col-lg-6"><img class="slide-in-left" src="assets/jake-dillon-image.jpg" alt="Jake Dillon"
                         class="img-fluid band-member-image"></div>
                 <div class="col-lg-6">
                     <h2>🎤 Vox/Keys/Guitar - Jake Dillon</h2>
@@ -108,7 +144,7 @@
 
             <!-- Jordan Roth's section -->
             <div class="row flex-lg-row-reverse">
-                <div class="col-lg-6"><img src="assets/jordan-roth-image.jpg" alt="Jordan Roth"
+                <div class="col-lg-6"><img class="slide-in-left" src="assets/jordan-roth-image.jpg" alt="Jordan Roth"
                         class="img-fluid band-member-image"></div>
                 <div class="col-lg-6">
                     <h2>🎸 Lead Guitar - Jordan Roth</h2>
@@ -146,7 +182,8 @@
 
             <!-- Brianna's section -->
             <div class="row">
-                <div class="col-lg-6"><img src="assets/brianna.jpg" alt="Brianna" class="img-fluid band-member-image">
+                <div class="col-lg-6"><img class="slide-in-left" src="assets/brianna.jpg" alt="Brianna"
+                        class="img-fluid band-member-image">
                 </div>
                 <div class="col-lg-6">
                     <h2>👩‍💼 Manager - Brianna Roth</h2>
@@ -199,6 +236,23 @@
             </a>
         </p>
     </footer>
+    <script>
+        ScrollReveal().reveal('.slide-in-left', {
+            distance: '100px',
+            origin: 'left',
+            duration: 1000,
+            reset: true
+        });
+
+        ScrollReveal().reveal('.slide-in-right', {
+            distance: '100px',
+            origin: 'right',
+            duration: 1000,
+            reset: true
+        });
+
+    </script>
+
 
 </body>
 
